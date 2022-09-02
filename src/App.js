@@ -2,7 +2,8 @@ import "./App.css";
 import youtube from "./api/youtube";
 import { Grid } from "@material-ui/core";
 import SearchBar from "./components/SearchBar";
-import { useState } from "react"
+import { useState } from "react";
+import VideoDetail from "./components/VideoDetail";
 
 function App() {
   const [videos, setvideos] = useState([]);
@@ -16,7 +17,7 @@ function App() {
             <SearchBar onSubmit={handleSubmit} />
           </Grid>
           <Grid item xs={8}>
-            {/* {VideoDetail} */}
+            <VideoDetail video={selectedVideo} />
           </Grid>
           <Grid item xs={4}>
             {/* {VideoList} */}
