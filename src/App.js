@@ -11,16 +11,16 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState({id : {}, snippet: {}})
 
   return (
-    <Grid style={{ justifyContent: "center" }} container spacing={10}>
+    <Grid style={{ justifyContent: "center" }} container spacing={0}>
       <Grid item xs={11}>
-        <Grid container spacing={10}>
+        <Grid container spacing={5 }>
           <Grid item xs={12}>
             <SearchBar onSubmit={handleSubmit} />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <VideoDetail video={selectedVideo} />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <VideoList videos={videos} onVideoSelect={setSelectedVideo} />
           </Grid>
         </Grid>
